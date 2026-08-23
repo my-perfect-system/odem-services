@@ -1,0 +1,124 @@
+---
+argument_specs:
+  main:
+    short_description: Deploy OpenVPN server from the mps-openvpn config repo
+    description:
+      - Clones the mps-openvpn repo, renders its .env from variables,
+        generates the PKI and a single TAP network, and starts the server
+        via docker compose.
+      - Docker and Docker Compose must already be present on the host.
+      - gen-certs.sh destroys the PKI on every run, so it is stat-gated
+        on the CA cert and only forced via openvpn_enable_regenerate.
+    options:
+      openvpn_enable_service:
+        type: bool
+        required: false
+        default: true
+        description: "Bring the compose services up at the end of the run"
+      openvpn_enable_regenerate:
+        type: bool
+        required: false
+        default: false
+        description: "Force gen-certs.sh to rebuild the PKI (destroys existing CA and certs)"
+      openvpn_packages:
+        type: list
+        required: false
+        elements: str
+        default: [git, curl]
+        description: "Packages required to clone the repo and run the generation scripts"
+      openvpn_repo_url:
+        type: str
+        required: false
+        default: "https://github.com/my-perfect-system/mps-openvpn.git"
+        description: "Git URL for the mps-openvpn repo"
+      openvpn_repo_version:
+        type: str
+        required: false
+        default: "main"
+        description: "Git ref to check out"
+      openvpn_repo_dest:
+        type: str
+        required: false
+        description: "Directory the mps-openvpn repo is cloned into; defaults to common_default_repo_dir/mps-openvpn (see defaults/main.yml)"
+      openvpn_server_address:
+        type: str
+        required: false
+        default: "server"
+        description: "SERVER_ADDRESS value written to .env (remote address in generated .ovpn files)"
+      openvpn_easyrsa_req_country:
+        type: str
+        required: false
+        default: "US"
+        description: "CA subject country"
+      openvpn_easyrsa_req_province:
+        type: str
+        required: false
+        default: "California"
+        description: "CA subject province"
+      openvpn_easyrsa_req_city:
+        type: str
+        required: false
+        default: "San Francisco"
+        description: "CA subject city"
+      openvpn_easyrsa_req_org:
+        type: str
+        required: false
+        default: "MPS OpenVPN"
+        description: "CA subject organization"
+      openvpn_easyrsa_req_email:
+        type: str
+        required: false
+        default: "admin@example.com"
+        description: "CA subject email"
+      openvpn_easyrsa_req_ou:
+        type: str
+        required: false
+        default: "TestLab"
+        description: "CA subject organizational unit"
+      openvpn_easyrsa_key_size:
+        type: int
+        required: false
+        default: 2048
+        description: "RSA key size"
+      openvpn_easyrsa_algo:
+        type: str
+        required: false
+        default: rsa
+        choices: [rsa, ec]
+        description: "EasyRSA key algorithm"
+      openvpn_easyrsa_ca_expire:
+        type: int
+        required: false
+        default: 3650
+        description: "CA certificate expiry in days"
+      openvpn_easyrsa_cert_expire:
+        type: int
+        required: false
+        default: 3650
+        description: "Issued certificate expiry in days"
+      openvpn_network_name:
+        type: str
+        required: false
+        default: example-tap
+        description: "VPN network name (also the server certificate CN)"
+      openvpn_network_mode:
+        type: str
+        required: false
+        default: tap
+        choices: [tap, tun]
+        description: "Network mode (tap layer 2 or tun layer 3)"
+      openvpn_network_port:
+        type: int
+        required: false
+        default: 1195
+        description: "UDP port the network listens on"
+      openvpn_network_subnet:
+        type: str
+        required: false
+        default: "10.9.0.0/24"
+        description: "CIDR subnet for the network"
+      openvpn_compose_file:
+        type: str
+        required: false
+        default: docker-compose.ansible.yml
+        description: "Path (relative to the repo dest) of the compose file rendered from docker-compose.yml.j2"

@@ -1,0 +1,15 @@
+---
+- name: Check for existing CA certificate
+  ansible.builtin.stat:
+    path: "{{ openvpn_repo_dest }}/common/easy-rsa/pki/ca.crt"
+  register: openvpn_ca_stat
+
+- name: Check for existing network config
+  ansible.builtin.stat:
+    path: "{{ openvpn_repo_dest }}/networks/{{ openvpn_network_name }}/server.conf"
+  register: openvpn_network_stat
+
+- name: Set CA and network presence facts
+  ansible.builtin.set_fact:
+    openvpn_ca_exists: "{{ openvpn_ca_stat.stat.exists }}"
+    openvpn_network_exists: "{{ openvpn_network_stat.stat.exists }}"

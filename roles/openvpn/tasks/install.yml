@@ -1,0 +1,7 @@
+---
+- name: Install openvpn prerequisites
+  ansible.builtin.package:
+    name: "{{ openvpn_packages }}"
+    state: present
+    update_cache: true
+  become: true

@@ -1,0 +1,9 @@
+---
+- name: Start OpenVPN compose services
+  ansible.builtin.shell: |
+    docker compose -f "{{ openvpn_compose_file }}" up -d --build
+  args:
+    chdir: "{{ openvpn_repo_dest }}"
+  become: true
+  changed_when: false
+  when: openvpn_enable_service | bool

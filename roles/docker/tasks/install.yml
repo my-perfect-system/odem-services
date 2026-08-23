@@ -1,0 +1,44 @@
+---
+- name: Install docker prerequisite packages
+  ansible.builtin.package:
+    name: "{{ docker_prereq_packages }}"
+    state: present
+    update_cache: true
+  become: true
+
+- name: Ensure apt keyrings directory exists
+  ansible.builtin.file:
+    path: "{{ docker_keyring_dir }}"
+    state: directory
+    mode: "0755"
+  become: true
+
+- name: Download Docker GPG key
+  ansible.builtin.get_url:
+    url: "{{ docker_gpg_key_url }}"
+    dest: "{{ docker_keyring_path }}"
+    mode: "0644"
+  become: true
+
+- name: Add Docker apt repository
+  ansible.builtin.apt_repository:
+    repo: "deb [arch=amd64 signed-by={{ docker_keyring_path }}] {{ docker_repo_url }} {{ docker_repo_release }} stable"
+    filename: "{{ docker_apt_filename }}"
+    state: present
+  become: true
+
+- name: Install Docker Engine packages
+  ansible.builtin.package:
+    name: "{{ docker_engine_packages }}"
+    state: present
+    update_cache: true
+  become: true
+
+- name: Start and enable docker service
+  ansible.builtin.systemd:
+    name: "{{ docker_service }}"
+    state: started
+    enabled: true
+    daemon_reload: true
+  become: true
+  when: docker_enable_service | bool
