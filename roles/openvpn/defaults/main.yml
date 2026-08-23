@@ -16,7 +16,7 @@ openvpn_repo_url: https://github.com/my-perfect-system/mps-openvpn.git
 
 openvpn_repo_version: main
 
-openvpn_repo_dest: "{{ common_default_repo_dir }}/mps-openvpn"
+openvpn_repo_dest: "{{ common_default_repo_dir_mps }}/mps-openvpn"
 
 openvpn_server_address: "{{ ansible_host | default('server') }}"
 
