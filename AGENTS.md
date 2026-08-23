@@ -8,7 +8,7 @@ config repo).
 
 - **namespace**: `odem`
 - **name**: `services`
-- **version**: `0.4.1`
+- **version**: `0.4.2`
 - **dependencies**: `odem.base >=0.1.0`, `ansible.posix >=1.0.0`
 
 ## Roles
@@ -17,6 +17,7 @@ config repo).
 |---|---|---|
 | `odem.services.docker` | Install latest Docker Engine from the official Docker apt repo (GPG key + `stable` repo + docker-ce + compose/buildx plugins), start/enable the service. | 1 |
 | `odem.services.openvpn` | Clone `mps-openvpn`, render `.env`, generate PKI + a single TAP network (stat-gated), render an own `docker-compose.yml` (server-only, port-driven), `docker compose up`. Requires `odem.services.docker`. | 2 |
+| `odem.services.monitoring` | Clone `mps-monitoring`, render `.env`, materialize gitignored config files from `.example` twins, run `setup.sh`, `docker compose up` the Prometheus/Loki/Grafana stack. Requires `odem.services.docker`. | 2 |
 
 ## Conventions
 

@@ -1,0 +1,91 @@
+---
+argument_specs:
+  main:
+    short_description: Deploy the mps-monitoring stack (Prometheus, Loki, Grafana)
+    description:
+      - Clones the mps-monitoring repo, renders its .env from variables,
+        materializes the gitignored service config files from their .example
+        siblings, runs the repo's setup.sh to prepare the bind-mounted data
+        directories, and starts the stack via docker compose.
+      - Docker and Docker Compose must already be present on the host.
+    options:
+      monitoring_enable_service:
+        type: bool
+        required: false
+        default: true
+        description: "Bring the compose stack up at the end of the run"
+      monitoring_enable_setup:
+        type: bool
+        required: false
+        default: true
+        description: "Run the repo's setup.sh to create and chown the data directories"
+      monitoring_packages:
+        type: list
+        required: false
+        elements: str
+        default: [git]
+        description: "Packages required to clone the repo and run setup.sh"
+      monitoring_repo_url:
+        type: str
+        required: false
+        default: "https://github.com/my-perfect-system/mps-monitoring.git"
+        description: "Git URL for the mps-monitoring repo"
+      monitoring_repo_version:
+        type: str
+        required: false
+        default: "main"
+        description: "Git ref to check out"
+      monitoring_repo_dest:
+        type: str
+        required: false
+        description: "Directory the mps-monitoring repo is cloned into; defaults to common_default_repo_dir/mps-monitoring (see defaults/main.yml)"
+      monitoring_bind_ip:
+        type: str
+        required: false
+        default: "127.0.0.1"
+        description: "Host IP the service ports bind to (0.0.0.0 for all interfaces)"
+      monitoring_grafana_port:
+        type: int
+        required: false
+        default: 3000
+        description: "Host port for Grafana"
+      monitoring_prometheus_port:
+        type: int
+        required: false
+        default: 9090
+        description: "Host port for Prometheus"
+      monitoring_loki_port:
+        type: int
+        required: false
+        default: 3100
+        description: "Host port for Loki"
+      monitoring_grafana_admin_user:
+        type: str
+        required: false
+        default: admin
+        description: "Grafana admin username"
+      monitoring_grafana_admin_password:
+        type: str
+        required: false
+        default: admin
+        description: "Grafana admin password"
+      monitoring_prometheus_version:
+        type: str
+        required: false
+        default: v3.12.0
+        description: "Prometheus image tag"
+      monitoring_loki_version:
+        type: str
+        required: false
+        default: 3.7.2
+        description: "Loki image tag"
+      monitoring_grafana_version:
+        type: str
+        required: false
+        default: 13.0.2
+        description: "Grafana image tag"
+      monitoring_config_files:
+        type: list
+        required: false
+        elements: dict
+        description: "Mapping of .example config files to their active destination paths (relative to the repo dest)"

@@ -7,7 +7,7 @@ server configuration managed from the `mps-openvpn` config repo.
 
 - **namespace**: `odem`
 - **name**: `services`
-- **version**: `0.4.1`
+- **version**: `0.4.2`
 - **dependencies**: `odem.base`, `ansible.posix`
 
 See [`galaxy.yml`](galaxy.yml) for the canonical values.
@@ -18,6 +18,7 @@ See [`galaxy.yml`](galaxy.yml) for the canonical values.
 |---|---|
 | [`odem.services.docker`](roles/docker/README.md) | Install the latest Docker Engine from the official Docker apt repository. |
 | [`odem.services.openvpn`](roles/openvpn/README.md) | Deploy an OpenVPN server from the `mps-openvpn` config repo (clone, `.env` render, PKI + TAP network generation, docker compose up). |
+| [`odem.services.monitoring`](roles/monitoring/README.md) | Deploy the `mps-monitoring` stack (Prometheus, Loki, Grafana) via docker compose. |
 
 ## Installation
 
