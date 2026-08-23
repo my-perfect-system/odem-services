@@ -3,44 +3,30 @@
 # Feature toggles — naming pattern: monitoring_enable_<feature>
 
 monitoring_enable_service: true
-
 monitoring_enable_setup: true
 
 # Regular configuration
-
 monitoring_packages:
   - git
-
 monitoring_repo_url: https://github.com/my-perfect-system/mps-monitoring.git
-
 monitoring_repo_version: main
-
 monitoring_repo_dest: "{{ common_default_repo_dir_mps }}/mps-monitoring"
 
 # .env content
 
 monitoring_bind_ip: "127.0.0.1"
-
 monitoring_grafana_port: 3000
-
 monitoring_prometheus_port: 9090
-
 monitoring_loki_port: 3100
-
 monitoring_grafana_admin_user: admin
-
 monitoring_grafana_admin_password: admin
-
 monitoring_prometheus_version: v3.12.0
-
 monitoring_loki_version: 3.7.2
-
 monitoring_grafana_version: 13.0.2
 
 # Config files materialized from their tracked .example siblings when missing.
 # The active configs are gitignored in the repo so users can customize them;
 # force is disabled to preserve local changes.
-
 monitoring_config_files:
   - src: services/prometheus/prometheus.yml.example
     dest: services/prometheus/prometheus.yml
