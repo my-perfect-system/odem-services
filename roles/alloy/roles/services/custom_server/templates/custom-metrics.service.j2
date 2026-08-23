@@ -1,0 +1,12 @@
+[Unit]
+Description=Custom Bash Prometheus Metrics Endpoint
+After=network.target
+[Service]
+Type=simple
+EnvironmentFile=/etc/default/custom-metrics
+ExecStart=/usr/local/bin/monitoring-custom-metrics.bash
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,27 @@
+---
+- name: Install alloy
+  ansible.builtin.include_tasks: install.yml
+- name: Ensure Alloy config directory exists
+  ansible.builtin.file:
+    path: "{{ alloy_config_dir }}"
+    state: directory
+    owner: root
+    group: root
+    mode: "0755"
+- name: Find stale alloy config files
+  ansible.builtin.find:
+    paths: "{{ alloy_config_dir }}"
+    patterns: "*.alloy"
+  register: _alloy_config_files
+  changed_when: false
+- name: Remove stale alloy config files
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    state: absent
+  loop: "{{ _alloy_config_files.files }}"
+  loop_control:
+    label: "{{ item.path }}"
+- name: Configure logging
+  ansible.builtin.include_tasks: configure_logging.yml
+- name: Configure remotes
+  ansible.builtin.include_tasks: configure_remotes.yml

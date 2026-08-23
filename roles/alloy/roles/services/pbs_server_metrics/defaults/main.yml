@@ -1,0 +1,3 @@
+---
+alloy_config_dir: /etc/alloy
+pbs_exporter_port: 9402

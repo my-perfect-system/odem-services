@@ -1,0 +1,82 @@
+---
+- name: Deploy Grafana Alloy monitoring stack
+  hosts: monitored_hosts
+  become: true
+  any_errors_fatal: true
+  handlers:
+    - name: Restart alloy
+      ansible.builtin.systemd:
+        name: alloy
+        state: restarted
+    - name: Restart custom-metrics
+      ansible.builtin.systemd:
+        name: custom-metrics
+        state: restarted
+    - name: Restart pbs-exporter
+      ansible.builtin.systemd:
+        name: pbs-exporter
+        state: restarted
+    - name: Restart blackbox-exporter
+      ansible.builtin.systemd:
+        name: prometheus-blackbox-exporter
+        state: restarted
+
+  tasks:
+    - name: Install Alloy and base config
+      ansible.builtin.include_role:
+        name: host/alloy_installer
+      when: "'host_alloy_installer' in monitoring_features | default([])"
+    - name: Configure custom metrics scrape endpoints
+      ansible.builtin.include_role:
+        name: host/custom_metrics
+      when: "'host_custom_metrics' in monitoring_features | default([])"
+    - name: Configure host node_exporter metrics
+      ansible.builtin.include_role:
+        name: host/default_metrics
+      when: "'host_default_metrics' in monitoring_features | default([])"
+    - name: Configure host default logs
+      ansible.builtin.include_role:
+        name: host/default_logs
+      when: "'host_default_logs' in monitoring_features | default([])"
+    - name: Configure docker metrics
+      ansible.builtin.include_role:
+        name: container/default_metrics
+      when: "'container_default_metrics' in monitoring_features | default([])"
+    - name: Configure docker logs
+      ansible.builtin.include_role:
+        name: container/default_logs
+      when: "'container_default_logs' in monitoring_features | default([])"
+    - name: Configure cadvisor
+      ansible.builtin.include_role:
+        name: container/cadvisor_metrics
+      when: "'container_cadvisor_metrics' in monitoring_features | default([])"
+    - name: Install custom-metrics server daemon
+      ansible.builtin.include_role:
+        name: services/custom_server
+      when: >-
+        'services_custom_server' in monitoring_features | default([])
+    - name: Configure custom-metrics scrape
+      ansible.builtin.include_role:
+        name: services/custom_server_metrics
+      when: >-
+        'services_custom_server_metrics' in monitoring_features | default([])
+    - name: Install PBS exporter
+      ansible.builtin.include_role:
+        name: services/pbs_server
+      when: "'services_pbs_server' in monitoring_features | default([])"
+    - name: Configure PBS exporter scrape
+      ansible.builtin.include_role:
+        name: services/pbs_server_metrics
+      when: "'services_pbs_server_metrics' in monitoring_features | default([])"
+    - name: Configure Ollama exporter scrape
+      ansible.builtin.include_role:
+        name: services/ollama_server_metrics
+      when: "'services_ollama_server_metrics' in monitoring_features | default([])"
+    - name: Install blackbox exporter
+      ansible.builtin.include_role:
+        name: services/blackbox_exporter
+      when: "'services_blackbox_exporter' in monitoring_features | default([])"
+    - name: Configure blackbox exporter scrape
+      ansible.builtin.include_role:
+        name: services/blackbox_exporter_metrics
+      when: "'services_blackbox_exporter_metrics' in monitoring_features | default([])"

@@ -1,0 +1,9 @@
+---
+- name: Template logging.alloy
+  ansible.builtin.template:
+    src: logging.alloy.j2
+    dest: "{{ alloy_config_dir }}/logging.alloy"
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Restart alloy

@@ -1,0 +1,7 @@
+prometheus.scrape "{{ item.name }}" {
+  targets = [
+    {"__address__" = "{{ item.address }}", "job" = "{{ item.job }}"},
+  ]
+  forward_to      = [prometheus.remote_write.mimir.receiver]
+  scrape_interval = "{{ item.scrape_interval | default('15s') }}"
+}

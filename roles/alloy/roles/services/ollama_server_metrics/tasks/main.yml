@@ -1,0 +1,4 @@
+---
+- name: Configure exporter scrape
+  ansible.builtin.include_tasks: configure_exporter_scrape.yml
+  when: "'services_ollama_server_metrics' in monitoring_features | default([])"
