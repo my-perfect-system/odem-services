@@ -40,7 +40,7 @@
     dest: "{{ monitoring_repo_dest }}/{{ item.dest }}"
     remote_src: true
     owner: root
-    group: root
+    group: "{{ user_default_admin_group }}"
     mode: "0664"
     force: false
   loop: "{{ monitoring_config_files }}"
