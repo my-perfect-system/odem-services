@@ -1,0 +1,31 @@
+---
+namespace: odem
+name: services
+version: 0.3.2
+readme: README.md
+authors:
+  - foo <bar@baz.com>
+description: Service deployment and configuration (OpenVPN and other network services)
+license:
+  - GPL-3.0-or-later
+tags:
+  - linux
+  - services
+  - openvpn
+  - networking
+  - odem
+repository: https://github.com/my-perfect-system/odem-services
+documentation: https://github.com/my-perfect-system/odem-services
+homepage: https://github.com/my-perfect-system/odem-services
+issues: https://github.com/my-perfect-system/odem-services/issues
+build_ignore:
+  .ansible-lint
+  .yamllint
+  - .git
+  - .github
+  - .gitignore
+  - "*.tar.gz"
+  - .ansible
+dependencies:
+  odem.base: ">=0.1.0"
+  ansible.posix: ">=1.0.0"
