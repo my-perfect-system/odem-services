@@ -1,0 +1,33 @@
+---
+
+# Feature toggles — naming pattern: docker_enable_<feature>
+
+docker_enable_service: true
+
+# Regular configuration
+
+docker_keyring_dir: /etc/apt/keyrings
+
+docker_keyring_path: "{{ docker_keyring_dir }}/docker.asc"
+
+docker_gpg_key_url: https://download.docker.com/linux/debian/gpg
+
+docker_repo_url: https://download.docker.com/linux/debian
+
+docker_repo_release: "{{ ansible_distribution_release }}"
+
+docker_apt_filename: docker
+
+docker_prereq_packages:
+  - ca-certificates
+  - curl
+  - gnupg
+
+docker_engine_packages:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-buildx-plugin
+  - docker-compose-plugin
+
+docker_service: docker

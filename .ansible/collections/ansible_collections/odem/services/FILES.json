@@ -1,0 +1,1713 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".ansible-lint",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f895029635515057d5c3fa5e84e1bce86290f8b6f6b2371be3b292727b9f9f39",
+   "format": 1
+  },
+  {
+   "name": ".yamllint",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8d9a256a8d9dcde56820c550cf832503eea7023ad4b6744ae282ec0fd79f84ba",
+   "format": 1
+  },
+  {
+   "name": ".ansible",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".ansible/.lock",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": ".ansible/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".ansible/collections",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".ansible/collections/ansible_collections",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".ansible/collections/ansible_collections/odem",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".ansible/roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fecf7b0d3f15b1962bc432e21b6b224ab677511ded90c1ea1017133f435efe34",
+   "format": 1
+  },
+  {
+   "name": "AGENTS.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "49a2b7330618ba369a91d8a83d87205d102b90aaa9f9de5181bc295b74004f1d",
+   "format": 1
+  },
+  {
+   "name": "roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/templates/env-openwebui.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d6a13b0b2130351b7a0e58c57fdf73dc4e3f0bd3b640fafb1e1bd36d5ef5644f",
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/templates/env-swag.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dc86575c40f310336b71dea39bf5c65a1ae4179cbfbab059bec96b3aa214b1b",
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/templates/env-kokoro.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bf805ba70ec8ebfab626d457a52c1e5576a8c3374b7253396f917ce7bb0c159a",
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/templates/env-root.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3611b5ac95ebf7d38ad884fc43614c2563cb2ab40d7d642ffed0aabdc46993a0",
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9f904910e114e591459999b824f8acff0f17920d5a2aaaa5867222cedacae681",
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/tasks/install.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0a2ee20428c170acb33693e3ede9386dd42ee89f53731ac68b0a0898afdf51e0",
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6bbae5ef263d1be651173ee64f78a126d7a3dd5f3fb68729c0fc058ab911ed98",
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d0c05a810fafd0b8d583de9400c87c033317dcabcea7fc58da0ac84e27814be0",
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "541a76d4b825191f7cf195aa0d52a38cd6868c5c467cf158eac29ba087778fdd",
+   "format": 1
+  },
+  {
+   "name": "roles/openwebui/meta/argument_specs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a361729f164f639b4d87dddca1d0ed0a100ba1534bf8f7b04725598a7cc3980c",
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/templates/env.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b69262b4013bdd2f42335519191f72e1e0b9809aaaf3008ab21f0e0ac81bf71a",
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/templates/docker-compose.yml.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "36f57c93321fa4b66dc7b086af1fca9c96087efffc1915674b2349652958bcc3",
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/tasks/facts.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "870bd5753624882247813a7e9dc79112a7bc8ab78c5516713383e6217673d765",
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "203818deda1e1c7ae0a2f6d10fe7c969ba2a5dc1aa41863cc5f732f4b98d740c",
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/tasks/service.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e6131835d503421fc8b947454729713b2d3307bd2dd802fd65e84690dbce994c",
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/tasks/install.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24b7f572f069f8e3bdbf6861710e669c5a5862ef770b4c3b17da77b49d796421",
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/tasks/configure.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eff7912d9bc89932d7b125572c79394e0bf9358dc4e9de4258d4ac2b336e3d8c",
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1bb44a67411679a85a7599ab20473920a1ebb0edad247e8f13e76238093ea70",
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d08d160b1fcf4a6edf9d6ca17ede8befedbbf259a3fcd0cab9b867ce5d936532",
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f05a18b3194099f55135acd8b03c95513720bc7ac9e145b229573a5cbe6c191",
+   "format": 1
+  },
+  {
+   "name": "roles/openvpn/meta/argument_specs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d0015bed36a4d77c2034fa9a1cc589f04cb98c846ce82140ebb190839b051558",
+   "format": 1
+  },
+  {
+   "name": "roles/.gitkeep",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "roles/docker",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/docker/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/docker/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9f904910e114e591459999b824f8acff0f17920d5a2aaaa5867222cedacae681",
+   "format": 1
+  },
+  {
+   "name": "roles/docker/tasks/install.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "162776d2ee94f8c0d8262f5462d454f8b0c94071f734818b83e74bb591c1b7f9",
+   "format": 1
+  },
+  {
+   "name": "roles/docker/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ac36db6adfae72aa9b5658789a4183bcba942b4a19e8f875cc7ac86b724048da",
+   "format": 1
+  },
+  {
+   "name": "roles/docker/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/docker/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cbcd9d9b37bb81f196db791c80855dddede15b9d9d145436a65e9a777a44d74b",
+   "format": 1
+  },
+  {
+   "name": "roles/docker/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/docker/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0018cc72fc40de1c48e0c7c5c129fa2874bf32bd11a59354912a1e9b48e8beca",
+   "format": 1
+  },
+  {
+   "name": "roles/docker/meta/argument_specs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f172a32cf80b2c3db75be95c6e6f1b19a8245c54827fd138d0f7d02d8f3ca2f",
+   "format": 1
+  },
+  {
+   "name": "roles/monitoring",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/monitoring/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/monitoring/templates/env.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4c883091913ff80a6fc5fc7a154857e76d2bf57a3c82f1a0b79600002b1d1d7f",
+   "format": 1
+  },
+  {
+   "name": "roles/monitoring/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/monitoring/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4bd1a4a6f62b30a04cdb4cbdfba3d3873237d0bd2beea5ea9889d17ed9ffeb5d",
+   "format": 1
+  },
+  {
+   "name": "roles/monitoring/tasks/install.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7e4919922b36bbae4fa546eb19056cc4d894b34dc9904cd039142c23b9bc6675",
+   "format": 1
+  },
+  {
+   "name": "roles/monitoring/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3e6c3bd7f9dfcfe2583f624f470fc84b41674e75729d289f4850236f4c840875",
+   "format": 1
+  },
+  {
+   "name": "roles/monitoring/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/monitoring/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "071ee4272d19922a275fb41d07669df2726d63ddae1159082025cd5608d72bd2",
+   "format": 1
+  },
+  {
+   "name": "roles/monitoring/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/monitoring/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "af0b51e5155b783e1a600d459103df20eee27bc58a26b897f1cbdb20af76112c",
+   "format": 1
+  },
+  {
+   "name": "roles/monitoring/meta/argument_specs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0bad0964dc067d1f2a90ab7f802e7df28b7fe100f6ed7a1f89d9428dae71b1e2",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/.ansible-lint",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ade2e8fa20375583f4e7f334d8f1bcaebfd8e29eb585513e3703ee4069372bb2",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/playbooks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/playbooks/site.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "608b7a01cac401106d5b2780482470dcb5240af57e2ae3d96bc984346dad4a39",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/host_vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/host_vars/host1.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1e831a9679ddc1e5bd3a9468a99ccd9495743838d34db3757b2651105b7236ed",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/inventory.ini",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "110bfaebbefcc42c01d1510fe94d609da15195dc6dbde6e773fe1ad010099f75",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/AGENTS.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e079eb092848186ddcfe1583aa73a7789dc615235636adc4bfbe44abe88b23cc",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/ansible.cfg",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "09b8749c7247a55c7f5ebaa277de7fbb0ebf5ec83deeb0bb6b16861d3d5dff8e",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_logs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_logs/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_logs/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_logs/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_logs/templates/docker_logs.alloy.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52578f4b02648512e152104a18ab21a6dc9b4bf117d036cdb45449552c63d4c",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_logs/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_logs/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8b82168019938f15042fe56c5cf284828c42f159f0264f9960d927d010880b66",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_logs/tasks/configure_docker_logs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6f6b4368c4c0ff21db846126a733eab2fa5fb537e7638d72fe179959605df3f5",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_logs/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_logs/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ca9d019164b1a0086e56f4235c07b0c2ec730530c88724a3dd753fd997640f16",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/cadvisor_metrics",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/cadvisor_metrics/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/cadvisor_metrics/templates/cadvisor.alloy.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "505afa0dd4b656b82f63c2164ebbc043aa264664309d6863f59e09d63e4636e8",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/cadvisor_metrics/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/cadvisor_metrics/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "70fb40f8a301d9c9fbcf5af45604c74be34e9c237bb272678e51430ea37c329b",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/cadvisor_metrics/dashboards",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/cadvisor_metrics/dashboards/dashboard_cadvisor.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5797015b3dcee3a64f5547bd566e60516db1ae5aceb3fcfdbd70e7a801d80652",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/cadvisor_metrics/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/cadvisor_metrics/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ca9d019164b1a0086e56f4235c07b0c2ec730530c88724a3dd753fd997640f16",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_metrics",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_metrics/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_metrics/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_metrics/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_metrics/templates/docker_metrics.alloy.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1a99a1b9958a4a661aa0dbdaa319f563973764f17f63333e8445ab967b18dfd5",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_metrics/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_metrics/tasks/configure_docker_metrics.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f0413a6b0432d5b0ff69befddbce7fbc40df43e447912dca8922ec800d4fb27e",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_metrics/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e1f97b36dd71298e8a52cede5e4a8bf54d1cac9bd72bd5fa1f54cb8bf7d81d4d",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_metrics/dashboards",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_metrics/dashboards/dashborad_docker.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f97e53a98c2e9ca9c6cdf9e401b66f52812cc2f5f437eec072ef60e41d957e90",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_metrics/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/container/default_metrics/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bb4a391f1c6a730f7e0f19f44e7a0a8cca09fd836e09a2624e7d27003709075e",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_logs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_logs/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_logs/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_logs/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_logs/templates/logs_system.alloy.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bedaa4f292ab55a6c6b3fa0e5f26d85569558a2d6243adf7301cd2bc57ce8cbb",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_logs/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_logs/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df4fb9b4fd97b3eea90e8c3d05a2c9051eabca159d250790017294ded6e74400",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_logs/tasks/configure_logs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6da8961c567148addf35acbb2330fd95a61cfe7c9c6118e51834b2974d57337b",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_logs/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_logs/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "41288b7787758fe3ce0c77ddacbe83b5c107ae16949ec2868ac70e9c24755268",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/templates/alloy.default.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e30396bba5f41dae9853f39e3c81bfb5bba1a5e51e18ee84042347d0bfe375d5",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/templates/remotes.alloy.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1d06f7f042ff98a2504f3e0af53a3d3a0eafbd8847d8aad203f901984128481c",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/templates/logging.alloy.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "520a22a68affd2f3c58be3812b79021a325ebfa934f6efdd0614aa1b654217b9",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "89e6690a88c88fb90f97b9ed258961c436f3cdeb1f98d4c9d8344d016772e6f5",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/tasks/configure_remotes.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ecdb5fc617ae050bea53f5246fe40c83c83205875d49cefdcf72f9fa6a36ef86",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/tasks/install.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1de3fd4ed24b97b81a19df124de54b5d9646a9b491cc274e4ab95967e0c66f21",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/tasks/configure_logging.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d43e78fde6d9123afc2ee1ae67f40b0df975988e67c0c3739372e3f757890105",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/alloy_installer/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "170229060eb0740e0ef562bf9efd9844dbc0eb60c885f2f583701f44eef98552",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/custom_metrics",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/custom_metrics/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/custom_metrics/templates/scrape_endpoint.alloy.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2b231467d6ee5dae0629b59a4a3406ee156c8bd4293046af4d4e5cb43b582027",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/custom_metrics/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/custom_metrics/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7c2509453f77407a85725decf95406daf2544fb12d5f21411130b4fb65fcc09f",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/custom_metrics/tasks/configure_metrics_scrape_endpoints.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8c5b0b112e5a20f5c1a227f563b807341975e4934998a5c76e3c282ee84edd85",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/custom_metrics/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/custom_metrics/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3319d7950017f93edb2522c2f416dca88577b13d00adf41d7663362c8f1b14e0",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics/templates/metrics_system.alloy.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d17d293c03b811bd173b55884b1b21bbbca5768dca1341a3e84ce8f3120e4931",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7dbd01512498431455a73c310e28478264d2d5f659287187e5c606ed8bae5cb0",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics/tasks/configure_metrics.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f2c8757ba98920f10b383aa8fd0725743502843421ae36a72ed4474ad950fca9",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics/dashboards",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics/dashboards/dashboard_prometheus.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "74b813cb97f2624cbd94643e31273e75efb4395e40f439f2a00d4b68abfd374d",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics/dashboards/dashboard_nodeexporter.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5fed22adac682de0e9102079b96c65778f56b32f5ce40c16831781130e7cb378",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/host/default_metrics/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d0502adbb55707571ac5722b3ca21d7d74cf6fba8b53abfe8f101e1b251d5a23",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server_metrics",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server_metrics/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server_metrics/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server_metrics/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server_metrics/templates/custom_metrics_scrape.alloy.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78d0cf742433fe4ceb0732a338493cea25794edb96346a9659e05ef1202939de",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server_metrics/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server_metrics/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "72ed6d97e53192d2d4709df67e1a40e39442badd84f1ecc7033bc647ca46aeb8",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server_metrics/tasks/configure_scrape.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "22159f0053665d2c099ba06dd9d63f0c44fd887449c3caee14e45a5699151aab",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server_metrics/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server_metrics/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7f4e3063b5bdab910e8f96d44e0772c9ec871521e88c07e6ee7630989a3a9122",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/templates/custom-metrics.default.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9d1781be02fa7553e7672e25a2639319cb298b0b7a2a95e9bd3c791f6324f83d",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/templates/custom-metrics.service.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1a18d3a878fb8e68e500d663b58096ba5bb6b10547b0db4b2f6728d75b944f6e",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "02da2f79a9c3055eb8052f2b9445342e421e21817a1236a9166bb6927d52efd5",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/tasks/deploy_config.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d5d60ad054b7d7b5f51c02781d5a6e20f85da9be593fe8fdc24f67edb5f12506",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/tasks/install_daemon.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3b67141478f6be240a5f125db01d0156cd954605d81ed80c1d79e5ce28e981ae",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/files/monitoring-custom-metrics.bash",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0d00ca07142a661efcf449f490d80b675c4efd2defaf6a2a7546f5c966237187",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/files/custom-metrics.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c461f2242e35e1aa96e10d60147219e1bd1c0ebb21c8d758448ccb3357c71806",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/custom_server/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "118c03fde52881a468bb8cfa660189ffaac468b606b00c720dac193eaac37129",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/ollama_server_metrics",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/ollama_server_metrics/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/ollama_server_metrics/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/ollama_server_metrics/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/ollama_server_metrics/templates/ollama_exporter_scrape.alloy.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "349e87faad96a022438b3b982fb65558662b767020aa7f39da72ca9286ed39ef",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/ollama_server_metrics/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/ollama_server_metrics/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "32cd0a2d99f0e4dc9959c105e88e40a30454a909d4f9614316ed174581967432",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/ollama_server_metrics/tasks/configure_exporter_scrape.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1957d82a69cd9b69ca4ae939fc5378d357db7f868796a8163a5bc5f7d95fe90b",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/ollama_server_metrics/dashboards",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/ollama_server_metrics/dashboards/dashboard_ollama.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5bf8a1e27874f4b5ab3e5532dfac844d0067b6a77553f1f2003eabe55d4393ed",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/ollama_server_metrics/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/ollama_server_metrics/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f83552b5be41f27a24368090864db4df1be1e9e4c83d54e63d9245742e29240",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter/templates/blackbox-exporter.default.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "acb6d7c15e2da42c3ad14cb4087c1296e04c5df1338a179a0f0d176d2831e72a",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter/templates/blackbox.yml.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "33c6c26ae53eab3cadb74610bd47dfae9e40a42ee3d9718eeec2e69838c71b7b",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter/templates/blackbox-exporter.service.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a22b8b8009383713eac5814f95ae88655c835a4ead09dc17f8ba4f9d89ded1b7",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "035565538c0cae84a5ecc6ffcf9f9ade455a540de131d85be98639e002ddb884",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter/tasks/install_exporter.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d79d3a26802ee3db5b1d93bf041641a6cf12415a93ca0049c8902712ad9ff8ba",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter/tasks/configure_modules.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1af2dae28b54819cf4947637ad6dc13289ed7c3653c2aae888e4f78cae190cb0",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e8ec17033611e427c09847747aa5e86aff3f5affe1e1c2362f83ab420aa71cb",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server/templates/pbs-exporter.default.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2509f5e8caf6e665a8009922c11dafeeb58f2997a28b8c61128a6ec4b13edacf",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server/templates/pbs-exporter.service.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c92fa5d06e7483d27c53ec11ea9352a20153b8e34d04c7ed8f025015645123fa",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "86254f1407039f52eb641c41a274c8bff1bb07a8d92e9ef8550f270d1b17e674",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server/tasks/install_exporter.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9343df3aa121047c05de7a94cc70dd7cb81d2f2fe017b33714c092077784490b",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server/dashboards",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server/dashboards/dashboard_pbsexporter.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c0008f0cf39885a21f77cda0f8ec97a392c55ef3355284ebc3c1f36b563f7f35",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f211a7112ff4075ce320e292000198032ffa690a273aac81ae2eab9ab2e3434e",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter_metrics",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter_metrics/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter_metrics/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter_metrics/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter_metrics/templates/blackbox_exporter_scrape.alloy.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c1bf5c076c074e922e84973eca5f8f9f5064a731005017f9b23b4b26663a62f4",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter_metrics/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter_metrics/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "41cc24d93041d5e140da1d409ac3c17f494095d6cc6880d811a7307fd1fb8298",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter_metrics/tasks/configure_exporter_scrape.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ede92f74f2b2bb1cbb467ac9ff24eccb6009be15b7c4bcdba896ff9b8a36e4de",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter_metrics/dashboards",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter_metrics/dashboards/dashboard_blackbox.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce403bb878e22dd250775b7aa8521913e6201741177ca954fa7a4fb1dd898fac",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter_metrics/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/blackbox_exporter_metrics/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3c5aa6954b2a13ecdecf4d67fd8e46e9cbd4c33ede8fba44bc97e360cb4b9af7",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server_metrics",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server_metrics/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server_metrics/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f52d711103d50a437830c6fbcd04fb4bab49a0f82f6d26d1c791c6e8488dd090",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server_metrics/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server_metrics/templates/pbs_exporter_scrape.alloy.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e093711cf9e761669788a885791ee2a0254df8da201137debee53d1563cb552",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server_metrics/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server_metrics/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0dbba6509345bd13ff380d6f920fa91f883c3307cb97cd9b99f83fd1790c95f6",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server_metrics/tasks/configure_exporter_scrape.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e0289aabe5dae3f501a7e3e97f92a099d977fa9eaad643a5c1d5655cba2bb36b",
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server_metrics/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/alloy/roles/services/pbs_server_metrics/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df9e166bb5bad35dda0cf8e99601dfd146d5f8c3ee0d0c53a2c8d4a74344a6ee",
+   "format": 1
+  },
+  {
+   "name": ".gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1382b0a04f0754cf6e87cea99e18953ffce70585a07a0fab9beb853764049fb2",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6698ae10ace1bbeba03d0d3df5feecfacb40c830b67544a79a31ab889d16427f",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

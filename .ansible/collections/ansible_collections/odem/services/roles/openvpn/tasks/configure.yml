@@ -1,0 +1,49 @@
+---
+- name: Clone mps-openvpn repository
+  ansible.builtin.git:
+    repo: "{{ openvpn_repo_url }}"
+    dest: "{{ openvpn_repo_dest }}"
+    version: "{{ openvpn_repo_version }}"
+    force: true
+  become: true
+
+- name: Render .env configuration
+  ansible.builtin.template:
+    src: env.j2
+    dest: "{{ openvpn_repo_dest }}/.env"
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Render docker compose configuration
+  ansible.builtin.template:
+    src: docker-compose.yml.j2
+    dest: "{{ openvpn_repo_dest }}/docker-compose.ansible.yml"
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Generate PKI when missing
+  ansible.builtin.shell: |
+    bash common/gen-certs.sh
+  args:
+    chdir: "{{ openvpn_repo_dest }}"
+  become: true
+  when: (not openvpn_ca_exists) or openvpn_enable_regenerate | bool
+
+- name: Clean partial network directory before regeneration
+  ansible.builtin.file:
+    path: "{{ openvpn_repo_dest }}/networks/{{ openvpn_network_name }}"
+    state: absent
+  become: true
+  when: not openvpn_network_exists
+
+- name: Generate TAP network when missing
+  ansible.builtin.shell: |
+    bash common/gen-network.sh "{{ openvpn_network_name }}" "{{ openvpn_network_mode }}" "{{ openvpn_network_port }}" "{{ openvpn_network_subnet }}"
+  args:
+    chdir: "{{ openvpn_repo_dest }}"
+  become: true
+  when: not openvpn_network_exists

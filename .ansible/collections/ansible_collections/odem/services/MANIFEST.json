@@ -1,0 +1,39 @@
+{
+ "collection_info": {
+  "namespace": "odem",
+  "name": "services",
+  "version": "0.4.3",
+  "authors": [
+   "foo <bar@baz.com>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "linux",
+   "services",
+   "openvpn",
+   "networking",
+   "odem"
+  ],
+  "description": "Service deployment and configuration (OpenVPN and other network services)",
+  "license": [
+   "GPL-3.0-or-later"
+  ],
+  "license_file": null,
+  "dependencies": {
+   "odem.base": ">=0.1.0",
+   "ansible.posix": ">=1.0.0"
+  },
+  "repository": "https://github.com/my-perfect-system/odem-services",
+  "documentation": "https://github.com/my-perfect-system/odem-services",
+  "homepage": "https://github.com/my-perfect-system/odem-services",
+  "issues": "https://github.com/my-perfect-system/odem-services/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "5421094abd370708d2027c58352a062aa6f15e7014790991a7217130fe414516",
+  "format": 1
+ },
+ "format": 1
+}

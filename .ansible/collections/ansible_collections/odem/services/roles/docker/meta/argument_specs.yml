@@ -1,0 +1,63 @@
+---
+argument_specs:
+  main:
+    short_description: Install Docker Engine from the official Docker apt repository
+    description:
+      - Adds the official Docker apt repository (signed by the Docker GPG
+        key) and installs the latest docker-ce packages, rather than the
+        older packages in the Debian archive.
+      - Installs docker-ce, docker-ce-cli, containerd.io, docker-buildx-plugin,
+        and docker-compose-plugin, then starts and enables the docker service.
+    options:
+      docker_enable_service:
+        type: bool
+        required: false
+        default: true
+        description: "Start and enable the docker systemd service"
+      docker_keyring_dir:
+        type: str
+        required: false
+        default: /etc/apt/keyrings
+        description: "Directory that holds the Docker apt signing key"
+      docker_keyring_path:
+        type: str
+        required: false
+        default: /etc/apt/keyrings/docker.asc
+        description: "Path to the Docker apt signing key"
+      docker_gpg_key_url:
+        type: str
+        required: false
+        default: https://download.docker.com/linux/debian/gpg
+        description: "URL of the Docker apt signing key"
+      docker_repo_url:
+        type: str
+        required: false
+        default: https://download.docker.com/linux/debian
+        description: "Base URL of the Docker apt repository"
+      docker_repo_release:
+        type: str
+        required: false
+        default: "trixie"
+        description: "Debian release codename for the Docker repository"
+      docker_apt_filename:
+        type: str
+        required: false
+        default: docker
+        description: "Filename for the Docker apt source list"
+      docker_prereq_packages:
+        type: list
+        required: false
+        elements: str
+        default: [ca-certificates, curl, gnupg]
+        description: "Packages required to fetch and verify the Docker repository"
+      docker_engine_packages:
+        type: list
+        required: false
+        elements: str
+        default: [docker-ce, docker-ce-cli, containerd.io, docker-buildx-plugin, docker-compose-plugin]
+        description: "Docker Engine packages installed from the official repository"
+      docker_service:
+        type: str
+        required: false
+        default: docker
+        description: "Name of the docker systemd service"

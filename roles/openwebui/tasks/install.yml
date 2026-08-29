@@ -1,0 +1,72 @@
+---
+
+- name: Install openwebui prerequisites
+  ansible.builtin.package:
+    name: "{{ openwebui_packages }}"
+    state: present
+    update_cache: true
+  become: true
+
+- name: Clone ailab-web repository
+  ansible.builtin.git:
+    repo: "{{ openwebui_repo_url }}"
+    dest: "{{ openwebui_repo_dest }}"
+    version: "{{ openwebui_repo_version }}"
+    force: true
+  become: true
+
+- name: Render root .env configuration
+  ansible.builtin.template:
+    src: env-root.j2
+    dest: "{{ openwebui_repo_dest }}/.env"
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Render openwebui/.env configuration
+  ansible.builtin.template:
+    src: env-openwebui.j2
+    dest: "{{ openwebui_repo_dest }}/openwebui/.env"
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Render swag/.env configuration
+  ansible.builtin.template:
+    src: env-swag.j2
+    dest: "{{ openwebui_repo_dest }}/swag/.env"
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Render kokoro/.env configuration
+  ansible.builtin.template:
+    src: env-kokoro.j2
+    dest: "{{ openwebui_repo_dest }}/kokoro/.env"
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+
+- name: Materialize authorized_keys from example sibling
+  ansible.builtin.copy:
+    src: "{{ openwebui_repo_dest }}/common/ssh/authorized_keys_example"
+    dest: "{{ openwebui_repo_dest }}/common/ssh/authorized_keys"
+    remote_src: true
+    owner: root
+    group: root
+    mode: "0644"
+    force: false
+  become: true
+
+- name: Start ailab-web compose stack
+  ansible.builtin.shell: |
+    docker compose up -d
+  args:
+    chdir: "{{ openwebui_repo_dest }}"
+  become: true
+  changed_when: false
+  when: openwebui_enable_service | bool

@@ -1,0 +1,9 @@
+---
+- name: Template custom_metrics_scrape.alloy
+  ansible.builtin.template:
+    src: custom_metrics_scrape.alloy.j2
+    dest: "{{ alloy_config_dir }}/custom_metrics_scrape.alloy"
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Restart alloy

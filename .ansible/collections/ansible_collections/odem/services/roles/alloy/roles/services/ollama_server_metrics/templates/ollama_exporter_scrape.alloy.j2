@@ -1,0 +1,15 @@
+prometheus.relabel "ollama" {
+  forward_to = [prometheus.remote_write.mimir.receiver]
+  rule {
+    target_label = "job"
+    replacement  = "ollama"
+  }
+}
+
+prometheus.scrape "ollama_exporter" {
+  targets = [
+    {"__address__" = "localhost:23004"},
+  ]
+  forward_to      = [prometheus.relabel.ollama.receiver]
+  scrape_interval = "30s"
+}

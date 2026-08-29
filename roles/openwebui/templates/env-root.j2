@@ -1,0 +1,23 @@
+# Ansible managed — rendered by the odem.services.openwebui role.
+
+# ─── FOLDERS ──────────────────────────────────────────────────────────────────
+COMMON_DIR={{ openwebui_common_dir }}
+OPENWEBUI_DIR={{ openwebui_dir }}
+SWAG_DIR={{ openwebui_swag_dir }}
+KOKORO_DIR={{ openwebui_kokoro_dir }}
+
+# ─── Open WebUI Web ───────────────────────────────────────────────────────────
+OPENWEBUI_IP_WEB={{ openwebui_ip_web }}
+OPENWEBUI_PORT_WEB={{ openwebui_port_web }}
+
+# ─── Open WebUI SSH ───────────────────────────────────────────────────────────
+OPENWEBUI_IP_SSH={{ openwebui_ip_ssh }}
+OPENWEBUI_PORT_SSH={{ openwebui_port_ssh }}
+
+# ─── SWAG Reverse Proxy ───────────────────────────────────────────────────────
+SWAG_IP={{ openwebui_swag_ip }}
+SWAG_PORT_HTTP={{ openwebui_swag_port_http }}
+SWAG_PORT_HTTPS={{ openwebui_swag_port_https }}
+
+# ─── Kokoro TTS ───────────────────────────────────────────────────────────────
+KOKORO_PORT={{ openwebui_kokoro_port }}

@@ -1,0 +1,36 @@
+---
+# Available features (named after their role folder: <subfolder>_<role>):
+monitoring_features:
+  - host_alloy_installer
+  - host_custom_metrics
+  - host_default_metrics
+  - host_default_logs
+  - container_default_metrics
+  - container_default_logs
+  - container_cadvisor_metrics
+  - services_custom_server
+  - services_custom_server_metrics
+  - services_ollama_server_metrics
+  - services_blackbox_exporter
+  - services_blackbox_exporter_metrics
+docker_metrics_exclude_containers:
+  - ollama-exporter
+blackbox_modules:
+  http_2xx:
+    prober: http
+    timeout: 5s
+    http:
+      method: GET
+blackbox_probe_targets:
+  - name: justaname.de
+    target: https://justaname.de
+    module: http_2xx
+  - name: t1.tortuga.lokal:3000
+    target: http://t1.tortuga.lokal:3000
+    module: http_2xx
+  - name: t1.tortuga.lokal:9090
+    target: http://t1.tortuga.lokal:9090
+    module: http_2xx
+  - name: t1.tortuga.lokal:3100
+    target: http://t1.tortuga.lokal:3100/ready
+    module: http_2xx

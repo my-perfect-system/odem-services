@@ -1,0 +1,23 @@
+---
+galaxy_info:
+  author: foo <bar@baz.com>
+  description: "Deploy the ailab-web stack (Open WebUI + SWAG + Kokoro) via docker compose"
+  min_ansible_version: "2.16.0"
+  license: GPL-3.0-or-later
+  platforms:
+    - name: Debian
+      versions:
+        - trixie
+  galaxy_tags:
+    - debian
+    - debian13
+    - trixie
+    - services
+    - openwebui
+    - webui
+    - ollama
+    - swag
+    - kokoro
+    - odem-services
+dependencies:
+  - role: odem.base.common

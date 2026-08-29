@@ -1,0 +1,66 @@
+---
+
+# Feature toggles — naming pattern: openwebui_enable_<feature>
+
+openwebui_enable_service: true
+
+# Regular configuration
+
+openwebui_packages:
+  - git
+
+openwebui_repo_url: git@github.com:al-readytaken/ailab-web.git
+
+openwebui_repo_version: main
+
+openwebui_repo_dest: "{{ common_default_repo_dir }}/github/al-readytaken/ailab-web"
+
+# Root .env — folder layout
+
+openwebui_common_dir: ./common
+openwebui_dir: ./openwebui
+openwebui_swag_dir: ./swag
+openwebui_kokoro_dir: ./kokoro
+
+# Root .env — Open WebUI web
+
+openwebui_ip_web: "0.0.0.0"
+openwebui_port_web: 3001
+
+# Root .env — Open WebUI SSH
+
+openwebui_ip_ssh: "0.0.0.0"
+openwebui_port_ssh: 22201
+
+# Root .env — SWAG reverse proxy
+
+openwebui_swag_ip: "0.0.0.0"
+openwebui_swag_port_http: 80
+openwebui_swag_port_https: 443
+
+# Root .env — Kokoro TTS
+
+openwebui_kokoro_port: 8880
+
+# openwebui/.env — Open WebUI service
+
+openwebui_webui_url: https://openwebui-local
+openwebui_webui_port: 3001
+openwebui_cors_allow_origin: https://openwebui-local
+openwebui_secret_key: your-secret-key-must-be-at-least-32-characters-long
+openwebui_ollama_base_url: http://ollama:11434
+openwebui_hf_token: ""
+openwebui_root_password: set-your-password-here
+
+# swag/.env — reverse proxy
+
+openwebui_swag_url: openwebui-local
+openwebui_swag_subdomains: www
+openwebui_swag_validation: http
+openwebui_swag_email: admin@example.com
+openwebui_swag_staging: true
+
+# kokoro/.env — TTS plugin
+
+openwebui_kokoro_device: cpu
+openwebui_kokoro_log_level: info

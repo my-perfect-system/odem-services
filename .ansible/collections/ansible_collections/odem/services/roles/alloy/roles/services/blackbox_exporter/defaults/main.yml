@@ -1,0 +1,5 @@
+---
+blackbox_exporter_port: 9115
+blackbox_config_file: /etc/prometheus/blackbox.yml
+blackbox_exporter_extra_args: ""
+blackbox_modules: {}

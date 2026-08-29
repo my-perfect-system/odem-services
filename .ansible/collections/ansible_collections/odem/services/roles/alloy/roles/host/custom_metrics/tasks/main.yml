@@ -1,0 +1,3 @@
+---
+- name: Configure metrics scrape endpoints
+  ansible.builtin.include_tasks: configure_metrics_scrape_endpoints.yml

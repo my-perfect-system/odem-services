@@ -1,0 +1,9 @@
+---
+alloy_user: alloy
+alloy_config_dir: /etc/alloy
+alloy_env_file: /etc/default/alloy
+alloy_web_ui_port: 12345
+alloy_metrics_port: 9400
+alloy_custom_labels: "os=debian13,systype=hw,physloc=de"
+remote_prometheus_url: "http://10.23.43.10:9090/api/v1/write"
+remote_loki_url: "http://10.23.43.10:3100/loki/api/v1/push"

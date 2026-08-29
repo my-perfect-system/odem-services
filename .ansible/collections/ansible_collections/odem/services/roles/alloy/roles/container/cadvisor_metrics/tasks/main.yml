@@ -1,0 +1,9 @@
+---
+- name: Template cadvisor.alloy
+  ansible.builtin.template:
+    src: cadvisor.alloy.j2
+    dest: "{{ alloy_config_dir }}/cadvisor.alloy"
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Restart alloy

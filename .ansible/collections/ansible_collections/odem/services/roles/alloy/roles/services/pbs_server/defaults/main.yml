@@ -1,0 +1,9 @@
+---
+pbs_exporter_version: "v1.0.0"
+pbs_exporter_port: 9402
+pbs_exporter_bin_dir: /usr/local/bin
+pbs_api_url: "https://localhost:8007"
+pbs_username: "pbsexporter@pbs"
+pbs_api_token_name: ""
+pbs_api_token: ""
+pbs_insecure: false

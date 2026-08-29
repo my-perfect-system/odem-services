@@ -1,0 +1,12 @@
+# Ansible managed — rendered by the odem.services.openwebui role.
+
+# Open WebUI internal port
+WEBUI_PORT={{ openwebui_webui_port }}
+WEBUI_URL="{{ openwebui_webui_url }}"
+CORS_ALLOW_ORIGIN="{{ openwebui_cors_allow_origin }}"
+WEBUI_SECRET_KEY="{{ openwebui_secret_key }}"
+OLLAMA_BASE_URL="{{ openwebui_ollama_base_url }}"
+HF_TOKEN="{{ openwebui_hf_token }}"
+
+# Root password for SSH access
+ROOT_PASSWORD={{ openwebui_root_password }}

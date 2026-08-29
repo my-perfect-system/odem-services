@@ -1,0 +1,3 @@
+---
+alloy_config_dir: /etc/alloy
+ollama_exporter_port: 25001

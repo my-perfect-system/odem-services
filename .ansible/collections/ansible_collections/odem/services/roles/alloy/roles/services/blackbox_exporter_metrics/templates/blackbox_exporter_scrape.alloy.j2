@@ -1,0 +1,15 @@
+prometheus.scrape "blackbox_exporter" {
+  targets = [
+{% for probe in blackbox_probe_targets %}
+    {"__address__"      = "localhost:{{ blackbox_exporter_port }}",
+     "__param_target"   = "{{ probe.target }}",
+     "__param_module"   = "{{ probe.module }}",
+     "instance"         = "{{ probe.target }}",
+     "module"           = "{{ probe.module }}",
+     "job"              = "blackbox-{{ probe.name }}"},
+{% endfor %}
+  ]
+  forward_to      = [prometheus.remote_write.mimir.receiver]
+  scrape_interval = "30s"
+  metrics_path    = "/probe"
+}

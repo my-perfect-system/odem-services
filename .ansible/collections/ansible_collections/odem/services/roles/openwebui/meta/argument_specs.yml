@@ -1,0 +1,170 @@
+---
+argument_specs:
+  main:
+    short_description: Deploy the ailab-web stack (Open WebUI + SWAG + Kokoro)
+    description:
+      - Clones the ailab-web repo over SSH, renders the root .env and
+        each per-service .env (openwebui, swag, kokoro), materializes the
+        gitignored common/ssh/authorized_keys from its _example sibling,
+        and starts the stack via docker compose.
+      - Docker and Docker Compose must already be present on the host.
+      - The external Docker network ailab-localai_ailab-local
+        (from the ailab-localai project) must already exist for the
+        openwebui/kokoro services to attach.
+    options:
+      openwebui_enable_service:
+        type: bool
+        required: false
+        default: true
+        description: "Bring the compose stack up at the end of the run"
+      openwebui_packages:
+        type: list
+        required: false
+        elements: str
+        default: [git]
+        description: "Packages required to clone the repo and run docker compose"
+      openwebui_repo_url:
+        type: str
+        required: false
+        default: "git@github.com:al-readytaken/ailab-web.git"
+        description: "Git URL for the ailab-web repo (SSH form)"
+      openwebui_repo_version:
+        type: str
+        required: false
+        default: "main"
+        description: "Git ref to check out"
+      openwebui_repo_dest:
+        type: str
+        required: false
+        description: "Directory the ailab-web repo is cloned into; defaults to common_default_repo_dir/github/al-readytaken/ailab-web (see defaults/main.yml)"
+      openwebui_common_dir:
+        type: str
+        required: false
+        default: "./common"
+        description: "Relative path to the shared common folder"
+      openwebui_dir:
+        type: str
+        required: false
+        default: "./openwebui"
+        description: "Relative path to the openwebui service folder"
+      openwebui_swag_dir:
+        type: str
+        required: false
+        default: "./swag"
+        description: "Relative path to the SWAG folder"
+      openwebui_kokoro_dir:
+        type: str
+        required: false
+        default: "./kokoro"
+        description: "Relative path to the Kokoro folder"
+      openwebui_ip_web:
+        type: str
+        required: false
+        default: "0.0.0.0"
+        description: "Host IP the Open WebUI web port binds to"
+      openwebui_port_web:
+        type: int
+        required: false
+        default: 3001
+        description: "Host port for Open WebUI web"
+      openwebui_ip_ssh:
+        type: str
+        required: false
+        default: "0.0.0.0"
+        description: "Host IP the Open WebUI SSH port binds to"
+      openwebui_port_ssh:
+        type: int
+        required: false
+        default: 22201
+        description: "Host port for Open WebUI SSH"
+      openwebui_swag_ip:
+        type: str
+        required: false
+        default: "0.0.0.0"
+        description: "Host IP the SWAG ports bind to"
+      openwebui_swag_port_http:
+        type: int
+        required: false
+        default: 80
+        description: "Host port for SWAG HTTP"
+      openwebui_swag_port_https:
+        type: int
+        required: false
+        default: 443
+        description: "Host port for SWAG HTTPS"
+      openwebui_kokoro_port:
+        type: int
+        required: false
+        default: 8880
+        description: "Host port for the Kokoro TTS service"
+      openwebui_webui_url:
+        type: str
+        required: false
+        default: "https://openwebui-local"
+        description: "WEBUI_URL for the Open WebUI service"
+      openwebui_webui_port:
+        type: int
+        required: false
+        default: 3001
+        description: "WEBUI_PORT for the Open WebUI service"
+      openwebui_cors_allow_origin:
+        type: str
+        required: false
+        default: "https://openwebui-local"
+        description: "CORS_ALLOW_ORIGIN for the Open WebUI service"
+      openwebui_secret_key:
+        type: str
+        required: false
+        default: "your-secret-key-must-be-at-least-32-characters-long"
+        description: "WEBUI_SECRET_KEY for the Open WebUI service"
+      openwebui_ollama_base_url:
+        type: str
+        required: false
+        default: "http://ollama:11434"
+        description: "OLLAMA_BASE_URL for the Open WebUI service"
+      openwebui_hf_token:
+        type: str
+        required: false
+        default: ""
+        description: "HuggingFace token for the Open WebUI service"
+      openwebui_root_password:
+        type: str
+        required: false
+        default: "set-your-password-here"
+        description: "ROOT_PASSWORD for SSH access into the Open WebUI container"
+      openwebui_swag_url:
+        type: str
+        required: false
+        default: openwebui-local
+        description: "URL for the SWAG reverse proxy"
+      openwebui_swag_subdomains:
+        type: str
+        required: false
+        default: www
+        description: "SUBDOMAINS for the SWAG reverse proxy"
+      openwebui_swag_validation:
+        type: str
+        required: false
+        default: http
+        description: "VALIDATION method for the SWAG reverse proxy"
+      openwebui_swag_email:
+        type: str
+        required: false
+        default: admin@example.com
+        description: "EMAIL for the SWAG reverse proxy certbot"
+      openwebui_swag_staging:
+        type: bool
+        required: false
+        default: true
+        description: "SWAG STAGING mode (true = self-signed, false = Let's Encrypt)"
+      openwebui_kokoro_device:
+        type: str
+        required: false
+        default: cpu
+        choices: [cpu, cuda]
+        description: "Device the Kokoro TTS runs on"
+      openwebui_kokoro_log_level:
+        type: str
+        required: false
+        default: info
+        description: "Log level for the Kokoro TTS service"
