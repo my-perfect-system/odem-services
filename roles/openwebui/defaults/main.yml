@@ -23,12 +23,12 @@ openwebui_kokoro_dir: ./kokoro
 
 # Root .env — Open WebUI web
 
-openwebui_ip_web: "0.0.0.0"
+openwebui_ip_web: "127.0.0.1"
 openwebui_port_web: 3001
 
 # Root .env — Open WebUI SSH
 
-openwebui_ip_ssh: "0.0.0.0"
+openwebui_ip_ssh: "127.0.0.1"
 openwebui_port_ssh: 22201
 
 # Root .env — SWAG reverse proxy
@@ -39,6 +39,7 @@ openwebui_swag_port_https: 443
 
 # Root .env — Kokoro TTS
 
+openwebui_kokoro_ip: "127.0.0.1"
 openwebui_kokoro_port: 8880
 
 # openwebui/.env — Open WebUI service
@@ -50,9 +51,9 @@ openwebui_secret_key: your-secret-key-must-be-at-least-32-characters-long
 openwebui_ollama_base_url: http://ollama:11434
 openwebui_hf_token: ""
 openwebui_root_password: set-your-password-here
+openwebui_bridge_name_ai: "brAilab"
 
 # swag/.env — reverse proxy
-
 openwebui_swag_url: openwebui-local
 openwebui_swag_subdomains: www
 openwebui_swag_validation: http

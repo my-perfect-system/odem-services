@@ -47,3 +47,14 @@
     chdir: "{{ openvpn_repo_dest }}"
   become: true
   when: not openvpn_network_exists
+
+- name: Generate client configs
+  ansible.builtin.shell: |
+    bash common/gen-client.sh "{{ item }}" {{ openvpn_network_name }}"
+  args:
+    chdir: "{{ openvpn_repo_dest }}"
+  become: true
+  loop: "{{ openvpn_clients }}"
+  loop_control:
+    label: "{{ entity.name }}"
+    loop_var: entity

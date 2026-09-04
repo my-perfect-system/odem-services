@@ -62,6 +62,38 @@
     force: false
   become: true
 
+- name: Create Docker Networks
+  hosts: localhost
+  connection: local
+  become: true
+
+  block:
+    - name: Create bridge networks if missing
+      community.docker.docker_network:
+        name: "{{ item }}"
+        driver: bridge
+        state: present
+      loop:
+        - brAilab
+
+# - name: Test bridge
+#   ansible.builtin.shell: |
+#     docker network create brAilab
+#   args:
+#     chdir: "{{ openwebui_repo_dest }}"
+#   become: true
+#   changed_when: false
+#   when: openwebui_enable_service | bool
+#
+# - name: Create brAilab bridge
+#   ansible.builtin.shell: |
+#     docker network create brAilab
+#   args:
+#     chdir: "{{ openwebui_repo_dest }}"
+#   become: true
+#   changed_when: false
+#   when: openwebui_enable_service | bool
+
 - name: Start ailab-web compose stack
   ansible.builtin.shell: |
     docker compose up -d
@@ -70,3 +102,5 @@
   become: true
   changed_when: false
   when: openwebui_enable_service | bool
+
+
