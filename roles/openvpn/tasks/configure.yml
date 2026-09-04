@@ -19,7 +19,7 @@
 - name: Render docker compose configuration
   ansible.builtin.template:
     src: docker-compose.yml.j2
-    dest: "{{ openvpn_repo_dest }}/docker-compose.ansible.yml"
+    dest: "{{ openvpn_repo_dest }}/docker-compose.{{ openvpn_network_name }}.yml"
     owner: root
     group: root
     mode: "0644"
@@ -50,7 +50,7 @@
 
 - name: Generate client configs
   ansible.builtin.shell: |
-    bash common/gen-client.sh "{{ item }}" {{ openvpn_network_name }}"
+    bash common/gen-client.sh "{{ entity.name }}" "{{ openvpn_network_name }}={{ entity.ip }}"
   args:
     chdir: "{{ openvpn_repo_dest }}"
   become: true
@@ -58,3 +58,23 @@
   loop_control:
     label: "{{ entity.name }}"
     loop_var: entity
+
+- name: Copy client config to local dir
+  ansible.builtin.copy:
+    src: "{{ openvpn_repo_dest }}/networks/{{ openvpn_network_name }}/clients/{{ openvpn_client_main }}.ovpn"
+    dest: /etc/openvpn/clients/
+    remote_src: true
+    owner: root
+    group: root
+    mode: '0644'
+  when: openvpn_enable_main_client
+
+- name: Render openvpn configuration
+  ansible.builtin.template:
+    src: openvpn_client_systemd.j2
+    dest: "/etc/systemd/system/openvpn-client.service"
+    owner: root
+    group: root
+    mode: "0644"
+  become: true
+  when: openvpn_enable_main_client

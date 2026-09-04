@@ -1,0 +1,18 @@
+[Unit]
+Description=Openvpn client ({{ openvpn_network_name }})
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/etc/openvpn/clients
+ExecStart=openvpn --config {{ openvpn_client_main }}.ovpn
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
+

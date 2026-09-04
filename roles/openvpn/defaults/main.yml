@@ -3,7 +3,7 @@
 # Feature toggles — naming pattern: openvpn_enable_<feature>
 
 openvpn_enable_service: true
-
+openvpn_enable_main_client: false
 openvpn_enable_regenerate: false
 
 # Regular configuration
@@ -21,35 +21,29 @@ openvpn_repo_dest: "{{ common_default_repo_dir_mps }}/mps-openvpn"
 openvpn_server_address: "{{ ansible_host | default('server') }}"
 
 # EasyRSA CA subject (rendered into .env)
-
 openvpn_easyrsa_req_country: "US"
-
 openvpn_easyrsa_req_province: "California"
-
 openvpn_easyrsa_req_city: "San Francisco"
-
 openvpn_easyrsa_req_org: "MPS OpenVPN"
-
 openvpn_easyrsa_req_email: "admin@example.com"
-
 openvpn_easyrsa_req_ou: "TestLab"
-
 openvpn_easyrsa_key_size: 2048
-
 openvpn_easyrsa_algo: rsa
-
 openvpn_easyrsa_ca_expire: 3650
-
 openvpn_easyrsa_cert_expire: 3650
 
 # Single TAP network
 
 openvpn_network_name: example-tap
-
 openvpn_network_mode: tap
-
 openvpn_network_port: 1195
-
 openvpn_network_subnet: 10.9.0.0/24
-
 openvpn_compose_file: docker-compose.ansible.yml
+openvpn_client_main: client1
+openvpn_tap_base_ip: 192.168.0.1
+openvpn_tun_base_ip: 192.168.1.1
+openvpn_clients: 
+  - name: client1
+    ip: 192.168.0.1
+  - name: client2
+    ip: 192.168.0.2

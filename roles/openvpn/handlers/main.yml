@@ -1,0 +1,6 @@
+- name: Restart openvpn
+  ansible.builtin.systemd:
+    name: openvpn-client
+    state: restarted
+
+

@@ -7,3 +7,11 @@
   become: true
   changed_when: false
   when: openvpn_enable_service | bool
+
+- name: Enable openvpn service
+  ansible.builtin.systemd:
+    name: openvpn-client
+    state: started
+    enabled: true
+    daemon-reload: true
+  when: openvpn_enable_main_client | bool

@@ -62,19 +62,18 @@
     force: false
   become: true
 
-- name: Create Docker Networks
-  hosts: localhost
-  connection: local
-  become: true
+- name: Install requests package
+  ansible.builtin.pip:
+    name: 
+      - requests
 
-  block:
-    - name: Create bridge networks if missing
-      community.docker.docker_network:
-        name: "{{ item }}"
-        driver: bridge
-        state: present
-      loop:
-        - brAilab
+- name: Create bridge networks if missing
+  community.docker.docker_network:
+    name: "{{ item }}"
+    driver: bridge
+    state: present
+  loop:
+    - "{{ openwebui_bridge_name_ai }}"
 
 # - name: Test bridge
 #   ansible.builtin.shell: |

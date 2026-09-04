@@ -12,7 +12,7 @@ monitoring_repo_version: main
 monitoring_repo_dest: "{{ common_default_repo_dir_mps }}/mps-monitoring"
 
 # .env content
-monitoring_bind_ip: "0.0.0.0"
+monitoring_bind_ip: "127.0.0.1"
 monitoring_grafana_port: 3000
 monitoring_prometheus_port: 9090
 monitoring_loki_port: 3100
