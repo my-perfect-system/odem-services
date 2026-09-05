@@ -1,4 +1,0 @@
----
-- name: Install exporter
-  ansible.builtin.include_tasks: install_exporter.yml
-  when: "'services_pbs_server' in monitoring_features | default([])"

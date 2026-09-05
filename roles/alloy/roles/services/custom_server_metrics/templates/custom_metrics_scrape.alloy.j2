@@ -1,8 +1,0 @@
-prometheus.scrape "custom_metrics" {
-  targets = [
-    {"__address__" = "localhost:{{ custom_metrics_port }}",
-     "job" = "custom-metrics"},
-  ]
-  forward_to      = [prometheus.remote_write.mimir.receiver]
-  scrape_interval = "{{ custom_metrics_scrape_interval }}"
-}

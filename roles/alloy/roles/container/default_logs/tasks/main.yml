@@ -1,3 +1,0 @@
----
-- name: Configure docker logs
-  ansible.builtin.include_tasks: configure_docker_logs.yml

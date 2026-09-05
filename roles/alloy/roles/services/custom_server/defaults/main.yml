@@ -1,6 +1,0 @@
----
-alloy_config_dir: /etc/alloy
-custom_metrics_config_file: "/etc/alloy/custom-metrics.json"
-custom_metrics_port: 25000
-custom_metrics_scrape_interval: 60
-custom_metrics_runtime_file: "/run/alloy/custom-metrics.prom"

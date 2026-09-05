@@ -1,3 +1,0 @@
----
-- name: Configure docker metrics
-  ansible.builtin.include_tasks: configure_docker_metrics.yml

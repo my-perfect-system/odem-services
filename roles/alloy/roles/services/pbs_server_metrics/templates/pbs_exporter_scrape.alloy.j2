@@ -1,8 +1,0 @@
-prometheus.scrape "pbs_exporter" {
-  targets = [
-    {"__address__" = "localhost:{{ pbs_exporter_port }}",
-     "job" = "pbs-exporter"},
-  ]
-  forward_to      = [prometheus.remote_write.mimir.receiver]
-  scrape_interval = "30s"
-}

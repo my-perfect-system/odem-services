@@ -1,4 +1,0 @@
----
-- name: Configure exporter scrape
-  ansible.builtin.include_tasks: configure_exporter_scrape.yml
-  when: "'services_blackbox_exporter_metrics' in monitoring_features | default([])"

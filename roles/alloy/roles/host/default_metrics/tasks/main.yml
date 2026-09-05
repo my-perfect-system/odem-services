@@ -1,3 +1,0 @@
----
-- name: Configure host node_exporter metrics
-  ansible.builtin.include_tasks: configure_metrics.yml

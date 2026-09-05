@@ -1,9 +1,0 @@
----
-- name: Template logs_system.alloy
-  ansible.builtin.template:
-    src: logs_system.alloy.j2
-    dest: "{{ alloy_config_dir }}/logs_system.alloy"
-    owner: root
-    group: root
-    mode: "0644"
-  notify: Restart alloy

@@ -1,4 +1,0 @@
----
-- name: Configure custom metrics scrape
-  ansible.builtin.include_tasks: configure_scrape.yml
-  when: "'services_custom_server_metrics' in monitoring_features | default([])"

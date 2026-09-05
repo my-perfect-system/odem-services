@@ -1,6 +1,0 @@
----
-- name: Install exporter
-  ansible.builtin.include_tasks: install_exporter.yml
-- name: Configure blackbox modules
-  ansible.builtin.include_tasks: configure_modules.yml
-  when: "'services_blackbox_exporter' in monitoring_features | default([])"

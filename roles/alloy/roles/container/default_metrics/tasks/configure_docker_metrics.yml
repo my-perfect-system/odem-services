@@ -1,9 +1,0 @@
----
-- name: Template docker_metrics.alloy
-  ansible.builtin.template:
-    src: docker_metrics.alloy.j2
-    dest: "{{ alloy_config_dir }}/docker_metrics.alloy"
-    owner: root
-    group: root
-    mode: "0644"
-  notify: Restart alloy

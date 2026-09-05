@@ -1,3 +1,0 @@
----
-alloy_config_dir: /etc/alloy
-docker_metrics_exclude_containers: []

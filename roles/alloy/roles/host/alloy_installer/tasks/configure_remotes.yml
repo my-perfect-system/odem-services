@@ -1,9 +1,0 @@
----
-- name: Template remotes.alloy
-  ansible.builtin.template:
-    src: remotes.alloy.j2
-    dest: "{{ alloy_config_dir }}/remotes.alloy"
-    owner: root
-    group: root
-    mode: "0644"
-  notify: Restart alloy

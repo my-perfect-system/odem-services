@@ -1,9 +1,0 @@
----
-- name: Template docker_logs.alloy
-  ansible.builtin.template:
-    src: docker_logs.alloy.j2
-    dest: "{{ alloy_config_dir }}/docker_logs.alloy"
-    owner: root
-    group: root
-    mode: "0644"
-  notify: Restart alloy

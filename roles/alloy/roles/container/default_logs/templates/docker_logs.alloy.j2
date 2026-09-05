@@ -1,9 +1,0 @@
-discovery.docker "docker_logs" {
-  host = "unix:///var/run/docker.sock"
-}
-loki.source.docker "containers" {
-  host       = "unix:///var/run/docker.sock"
-  targets    = discovery.docker.docker_logs.targets
-  labels     = {"job" = "docker"}
-  forward_to = [loki.write.loki.receiver]
-}

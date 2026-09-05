@@ -1,7 +1,0 @@
----
-alloy_config_dir: /etc/alloy
-alloy_metrics_scrape_endpoints:
-  - name: custom_metrics_endpoint
-    address: localhost:25000
-    job: generic-metrics
-    scrape_interval: 15s
