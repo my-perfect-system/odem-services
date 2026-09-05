@@ -4,6 +4,8 @@
 
 docker_enable_service: true
 
+docker_enable_overlay2: true
+
 # Regular configuration
 
 docker_keyring_dir: /etc/apt/keyrings
@@ -31,3 +33,7 @@ docker_engine_packages:
   - docker-compose-plugin
 
 docker_service: docker
+
+docker_storage_driver: overlay2
+
+docker_data_root: /var/lib/docker

@@ -14,6 +14,21 @@ argument_specs:
         required: false
         default: true
         description: "Start and enable the docker systemd service"
+      docker_enable_overlay2:
+        type: bool
+        required: false
+        default: true
+        description: "Write /etc/docker/daemon.json (storage driver + data root)"
+      docker_storage_driver:
+        type: str
+        required: false
+        default: overlay2
+        description: "Docker storage driver (overlay2 or overlayfs)"
+      docker_data_root:
+        type: str
+        required: false
+        default: /var/lib/docker
+        description: "Docker data root directory (overlays, volumes, images)"
       docker_keyring_dir:
         type: str
         required: false
