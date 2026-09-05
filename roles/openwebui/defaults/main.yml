@@ -52,6 +52,8 @@ openwebui_ollama_base_url: http://ollama:11434
 openwebui_hf_token: ""
 openwebui_root_password: set-your-password-here
 openwebui_bridge_name_ai: "brAilab"
+openwebui_localai_host: foo-host
+openwebui_localai_ip: 192.168.0.2
 
 # swag/.env — reverse proxy
 openwebui_swag_url: openwebui-local

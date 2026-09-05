@@ -11,6 +11,7 @@ openvpn_enable_regenerate: false
 openvpn_packages:
   - git
   - curl
+  - openvpn
 
 openvpn_repo_url: https://github.com/my-perfect-system/mps-openvpn.git
 
