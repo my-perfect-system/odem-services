@@ -62,11 +62,6 @@
     force: false
   become: true
 
-- name: Install requests package
-  ansible.builtin.pip:
-    name: 
-      - requests
-
 - name: Create bridge networks if missing
   community.docker.docker_network:
     name: "{{ item }}"

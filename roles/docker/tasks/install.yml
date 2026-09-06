@@ -38,9 +38,18 @@
   ansible.builtin.file:
     path: "{{ docker_data_root }}"
     state: directory
-    owner: "{{ common_default_owner }}"
+    owner: "{{ identity_default_owner }}"
     group: "docker"
-    mode: "{{ common_default_suid_mode }}"
+    mode: "{{ identity_default_suid_mode }}"
+  become: true
+
+- name: Ensure docker data tmp directory exists
+  ansible.builtin.file:
+    path: "{{ docker_data_root }}/tmp"
+    state: directory
+    owner: "{{ identity_default_owner }}"
+    group: "docker"
+    mode: "{{ identity_default_suid_mode }}"
   become: true
 
 - name: Configure docker daemon
@@ -51,6 +60,7 @@
     group: root
     mode: "0644"
   become: true
+  notify: Restart docker
 
 - name: Start and enable docker service
   ansible.builtin.systemd:

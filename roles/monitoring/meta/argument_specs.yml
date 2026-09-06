@@ -38,7 +38,7 @@ argument_specs:
       monitoring_repo_dest:
         type: str
         required: false
-        description: "Directory the mps-monitoring repo is cloned into; defaults to common_default_repo_dir/mps-monitoring (see defaults/main.yml)"
+        description: "Directory the mps-monitoring repo is cloned into; defaults to identity_default_repo_dir/mps-monitoring (see defaults/main.yml)"
       monitoring_bind_ip:
         type: str
         required: false

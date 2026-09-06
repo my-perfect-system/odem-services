@@ -38,7 +38,7 @@ configurable via `docker_storage_driver` and `docker_data_root`.
 
 ## Dependencies
 
-- `odem.base.common`
+- `odem.base.identity`
 
 ## Example usage
 

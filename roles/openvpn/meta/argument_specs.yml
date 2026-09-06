@@ -39,7 +39,7 @@ argument_specs:
       openvpn_repo_dest:
         type: str
         required: false
-        description: "Directory the mps-openvpn repo is cloned into; defaults to common_default_repo_dir/mps-openvpn (see defaults/main.yml)"
+        description: "Directory the mps-openvpn repo is cloned into; defaults to identity_default_repo_dir/mps-openvpn (see defaults/main.yml)"
       openvpn_server_address:
         type: str
         required: false

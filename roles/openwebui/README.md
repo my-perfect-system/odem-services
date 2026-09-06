@@ -26,7 +26,7 @@ and kokoro services to attach to.
 | `openwebui_enable_service` | `true` | Bring the compose stack up at the end of the run |
 | `openwebui_repo_url` | `git@github.com:al-readytaken/ailab-web.git` | Git URL for the ailab-web repo (SSH form) |
 | `openwebui_repo_version` | `main` | Git ref to check out |
-| `openwebui_repo_dest` | `{{ common_default_repo_dir }}/github/al-readytaken/ailab-web` | Clone destination |
+| `openwebui_repo_dest` | `{{ identity_default_repo_dir }}/github/al-readytaken/ailab-web` | Clone destination |
 | `openwebui_ip_web` | `0.0.0.0` | Host IP the Open WebUI web port binds to |
 | `openwebui_port_web` | `3001` | Host port for Open WebUI web |
 | `openwebui_ip_ssh` | `0.0.0.0` | Host IP the Open WebUI SSH port binds to |
@@ -57,7 +57,7 @@ for the full list.
 
 ## Dependencies
 
-- `odem.base.common`
+- `odem.base.identity`
 
 ## Example usage
 

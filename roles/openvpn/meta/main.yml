@@ -18,4 +18,4 @@ galaxy_info:
     - network
     - odem-services
 dependencies:
-  - role: odem.base.common
+  - role: odem.base.identity

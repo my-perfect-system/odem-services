@@ -9,7 +9,7 @@ monitoring_packages:
   - git
 monitoring_repo_url: https://github.com/my-perfect-system/mps-monitoring.git
 monitoring_repo_version: main
-monitoring_repo_dest: "{{ common_default_repo_dir_mps }}/mps-monitoring"
+monitoring_repo_dest: "{{ identity_default_repo_dir_mps }}/mps-monitoring"
 
 # .env content
 monitoring_bind_ip: "127.0.0.1"

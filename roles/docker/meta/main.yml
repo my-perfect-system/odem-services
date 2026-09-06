@@ -17,4 +17,4 @@ galaxy_info:
     - containers
     - odem-services
 dependencies:
-  - role: odem.base.common
+  - role: odem.base.identity

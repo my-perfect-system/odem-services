@@ -8,12 +8,13 @@ openwebui_enable_service: true
 
 openwebui_packages:
   - git
+  - python3-requests
 
 openwebui_repo_url: https://github.com/al-readytaken/ailab-web.git
 
 openwebui_repo_version: main
 
-openwebui_repo_dest: "{{ common_default_repo_dir }}/github/al-readytaken/ailab-web"
+openwebui_repo_dest: "{{ identity_default_repo_dir }}/github/al-readytaken/ailab-web"
 # Root .env — folder layout
 
 openwebui_common_dir: ./common

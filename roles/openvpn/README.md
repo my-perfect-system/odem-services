@@ -21,7 +21,7 @@ dedicated docker role runs in advance).
 | `openvpn_enable_regenerate` | `false` | Force a PKI rebuild (destroys the existing CA and all certs) |
 | `openvpn_repo_url` | `https://github.com/my-perfect-system/mps-openvpn.git` | Git URL for the mps-openvpn repo |
 | `openvpn_repo_version` | `main` | Git ref to check out |
-| `openvpn_repo_dest` | `{{ common_default_repo_dir }}/mps-openvpn` | Clone destination (derived from the `common_default_repo_dir` global in `odem.base.common`) |
+| `openvpn_repo_dest` | `{{ identity_default_repo_dir }}/mps-openvpn` | Clone destination (derived from the `identity_default_repo_dir` global in `odem.base.identity`) |
 | `openvpn_server_address` | `server` | `SERVER_ADDRESS` in `.env` (remote address in `.ovpn` files) |
 | `openvpn_network_name` | `example-tap` | Network name (also the server certificate CN) |
 | `openvpn_network_mode` | `tap` | Network mode (`tap` or `tun`) |
@@ -36,7 +36,7 @@ consumed by `common/gen-certs.sh` for the CA subject — see
 
 ## Dependencies
 
-- `odem.base.common`
+- `odem.base.identity`
 
 ## Example usage
 

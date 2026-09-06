@@ -21,7 +21,7 @@ argument_specs:
         type: list
         required: false
         elements: str
-        default: [git]
+        default: [git, python3-requests]
         description: "Packages required to clone the repo and run docker compose"
       openwebui_repo_url:
         type: str
@@ -36,7 +36,7 @@ argument_specs:
       openwebui_repo_dest:
         type: str
         required: false
-        description: "Directory the ailab-web repo is cloned into; defaults to common_default_repo_dir/github/al-readytaken/ailab-web (see defaults/main.yml)"
+        description: "Directory the ailab-web repo is cloned into; defaults to identity_default_repo_dir/github/al-readytaken/ailab-web (see defaults/main.yml)"
       openwebui_common_dir:
         type: str
         required: false
